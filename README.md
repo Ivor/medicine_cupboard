@@ -1,21 +1,11 @@
 # MedicineCupboard
 
-**TODO: Add description**
-
-## Installation
-
-If [available in Hex](https://hex.pm/docs/publish), the package can be installed
-by adding `medicine_cupboard` to your list of dependencies in `mix.exs`:
+A small project to show an approach to filtering records, using Ecto, where the record has a field that is defined as:
 
 ```elixir
-def deps do
-  [
-    {:medicine_cupboard, "~> 0.1.0"}
-  ]
-end
+  field :array_of_string, {:array, :string}
 ```
 
-Documentation can be generated with [ExDoc](https://github.com/elixir-lang/ex_doc)
-and published on [HexDocs](https://hexdocs.pm). Once published, the docs can
-be found at <https://hexdocs.pm/medicine_cupboard>.
+The problem arises when we want to filter on other attributes AND the presence of one or more values in the array of strings.
 
+See the [test/medicine_filter_test.exs](test/medicine_filter_test.exs) file for the meat.
