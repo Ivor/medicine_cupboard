@@ -17,7 +17,6 @@ defmodule MedicineCupboard.MedicineFilterTest do
     query
     |> MedicineFilter.type_filter(params)
     |> MedicineFilter.condition_filter(params)
-    |> IO.inspect(label: "the query", pretty: true, printable_limit: :infinity)
     |> Repo.all()
   end
 
@@ -25,7 +24,6 @@ defmodule MedicineCupboard.MedicineFilterTest do
     query
     |> MedicineFilter.type_filter(params)
     |> MedicineFilter.broken_condition_filter(params)
-    |> IO.inspect(label: "the query", pretty: true, printable_limit: :infinity)
     |> Repo.all()
   end
 
